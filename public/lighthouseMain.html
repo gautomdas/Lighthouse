@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function open_in_new_tab(url)
+  {
+    var win=window.location.replace(url, '_blank');
+    win.focus();
+  }
+	function on() {
+    document.getElementById("overlay").style.display = "block";
+	}
+
+	function off() {
+	    document.getElementById("overlay").style.display = "none";
+	}
+  </script>
+  <style>
+  body {
+      margin: 0;
+  }
+
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100px;
+      background-color: #A56396;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+  }
+  li a {
+      padding: 10;
+      padding-top: 25%;
+      height: 70;
+      display: block;
+      color: #000;
+      text-decoration: none;
+  }
+  li a.active {
+      background-color: #A56396;
+      color: white;
+  }
+
+  li a:hover {
+      background-color: #E086CB;
+  }
+	#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+	}
+    #canvas {
+       display: block;
+       background-color: #FFFFFF
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+</head>
+<body onload="on()">
+	<div id="overlay" onclick="off()"></div>
+  <ul style>
+    <li id="Home"><a class="active"><input type="image" onclick="open_in_new_tab('index.html')" src="images\001-navigational.svg" alt="Lighthouse"></a></li>
+    <li id="Paint"><a class = "active"><input type="image" onclick="open_in_new_tab('paint.html')" src="images\001-paint-brush.svg" alt="Paint"></a></li>
+    <li id = "Message"><a class = "active" ><input type = "image" onclick="open_in_new_tab('message.html')" src="images\003-interface.svg" alt="Messages"></a></li>
+    <li id = "Tutorial"><a class = "active"><input type = "image" onclick="open_in_new_tab('tutorial.html')" src="images\002-tutorial.svg" alt="Tutorial"></a></li>
+  </ul>
+  <div style="margin-left:100px;padding:1px 16px;height:1000px;">
+    <h2>Fixev</h2>
+    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+    <canvas id="drawing"></canvas>
+    <script src="/client.js"></script>
+  </div>
+</body>
+</html>
