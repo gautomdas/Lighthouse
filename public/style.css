@@ -5,7 +5,7 @@ body {
     text-align:center;
     margin:0;
 }
-p{
+p {
     margin:0;
     padding:0;
     text-align:left;
@@ -19,6 +19,7 @@ ul {
     position: fixed;
     height: 100%;
     overflow: auto;
+    vertical-align: middle;
 }
 li a {
     padding: 10;
@@ -27,14 +28,17 @@ li a {
     display: block;
     color: #000;
     text-decoration: none;
+    vertical-align: middle;
 }
 li a.active {
     background-color: #A56396;
     color: white;
+    vertical-align: middle;
 }
 
 li a:hover {
     background-color: #E086CB;
+    vertical-align: middle;
 }
   #canvas {
      display: block;
