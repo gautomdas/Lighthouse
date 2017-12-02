@@ -1,7 +1,7 @@
 body {
     font-size:20px;
     font-family: 'Roboto', sans-serif;
-    color: #EFEFEF;
+    color: #000000;
     text-align:center;
     margin:0;
 }
@@ -14,28 +14,32 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
+    width: 100px;
+    background-color: #A56396;
     position: fixed;
     height: 100%;
     overflow: auto;
 }
-
 li a {
+    padding: 10;
+    padding-top: 25%;
+    height: 70;
     display: block;
     color: #000;
-    padding: 8px 16px;
     text-decoration: none;
 }
 li a.active {
-    background-color: #4CAF50;
+    background-color: #A56396;
     color: white;
 }
 
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+li a:hover {
+    background-color: #E086CB;
 }
+  #canvas {
+     display: block;
+     background-color: #FFFFFF
+  }
 
 /*for boxes*/
 .square {
