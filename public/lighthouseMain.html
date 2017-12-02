@@ -55,10 +55,34 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 	}
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    font-family: "Tahoma";
+  }
+  #cont{
+    background-color: #A56396;
+    position: absolute;
+    border: none;
+    top: 62%;
+    left: 50%;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 15px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    font-family: "Tahoma";
+  }
     #canvas {
        display: block;
        background-color: #FFFFFF
@@ -67,7 +91,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
 </head>
 <body onload="on()">
-	<div id="overlay" onclick="off()"></div>
+	<div id="overlay" onclick="off()">
+    <div id="text">Welcome to Lighthouse</div>
+    <button id="cont">Continue</button>
+  </div>
   <ul style>
     <li id="Home"><a class="active"><input type="image" onclick="open_in_new_tab('index.html')" src="images\001-navigational.svg" alt="Lighthouse" align = "middle"></a></li>
     <li id="Paint"><a class = "active"><input type="image" onclick="open_in_new_tab('paint.html')" src="images\001-paint-brush.svg" alt="Paint"></a></li>
