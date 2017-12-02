@@ -1,0 +1,24 @@
+{
+  "name": "lighthouse",
+  "version": "1.0.0",
+  "description": "Lighthouse",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gautomdas/Lighthouse.git"
+  },
+  "author": "Itamar Fiorino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gautomdas/Lighthouse/issues"
+  },
+  "homepage": "https://github.com/gautomdas/Lighthouse#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}
